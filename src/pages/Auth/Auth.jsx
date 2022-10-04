@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { login, signUp } from '../../api/AuthRequests'
 import { useInfoContext } from '../../context/Context'
-import Logo from "../../images/logo.png"
+import Logo from "../../img/logo.png"
 
 import "./Auth.css"
 
