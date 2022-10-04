@@ -1,0 +1,72 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* gap: 4rem; */
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.auth > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 32px;
+}
+
+/* left-side */
+
+.auth-left {
+  gap: 2rem;
+}
+
+.logo-img {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.app-name > h1 {
+  font-size: 48px;
+  background-color: red;
+  background-size: 100%;
+  background-image: var(--buttonBg);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.app-name > h6 {
+  font-size: 14px;
+}
+.confirm-span {
+  color: red;
+  font-size: 12px;
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-top: 5px;  
+}
+
+.info-span {
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* right-side */
+
+.auth-form {
+  background-color: var(--cardColor);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.auth-form > div {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+}

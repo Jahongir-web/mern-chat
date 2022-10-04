@@ -1,0 +1,28 @@
+.logo-search {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.search {
+  display: flex;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: var(--inputColor);
+}
+
+.search > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+  background-image: var(--buttonBg);
+}
