@@ -1,14 +1,14 @@
 .logo-search {
   display: flex;
-  margin-bottom: 10px;
+
 }
 
 .search {
   display: flex;
+  background-color: var(--inputColor);
   border-radius: 10px;
   padding: 5px;
   margin-left: 10px;
-  background-color: var(--inputColor);
 }
 
 .search > input {
@@ -21,8 +21,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(106.23deg, #f99827 0%, #f95f35 100%);
   border-radius: 5px;
   padding: 4px;
   color: white;
-  background-image: var(--buttonBg);
 }
