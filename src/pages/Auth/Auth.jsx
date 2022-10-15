@@ -20,7 +20,7 @@ export const Auth = () => {
 
   const [isSignUp, setIsSignUp] = useState(false)
 
-  const {user, setUser, loading, setLoading} = useInfoContext()
+  const {setUser, loading, setLoading} = useInfoContext()
 
   const [data, setData] = useState(initialState)
 
@@ -29,12 +29,15 @@ export const Auth = () => {
   // signup
   const sigUpUser = async () => {
     try {
+      setLoading(true)
       const res = await signUp(data)
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('profile', JSON.stringify(res.data.newUser)) 
       setUser(res.data.newUser)
+      setLoading(false)
       navigate('/home')           
     } catch (error) {
+      setLoading(false)
       console.log(error);
       alert(error.response.data.message)
     }
@@ -42,12 +45,15 @@ export const Auth = () => {
   //login
   const loginUser = async () => {
     try {
+      setLoading(true)
       const res = await login(data)
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('profile', JSON.stringify(res.data.user))     
       setUser(res.data.user)
+      setLoading(false)
       navigate('/home')  
     } catch (error) {
+      setLoading(false)
       console.log(error);
       alert(error.response.data.message)
     }
@@ -125,8 +131,8 @@ export const Auth = () => {
             }}>
               {isSignUp ? "Already have an account Login" : "Don't have an account Sign Up"}
             </span>
-            <button className="info-btn button">
-              {isSignUp ? "SignUp" : "Login"}
+            <button className="info-btn button" disabled={loading}>
+              {loading ? "Loading..." : isSignUp ? "SignUp" : "Login"}
             </button>
 
           </div>

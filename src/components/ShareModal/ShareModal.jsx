@@ -5,7 +5,7 @@ import "./ShareModal.css"
 import { PostShare } from '../PostShare/PostShare'
 
 export const ShareModal = ({openModal,setOpenModal}) => {
-  console.log(openModal);
+  
   return (
     <Modal 
       onClose={()=> setOpenModal(false)}
@@ -14,7 +14,6 @@ export const ShareModal = ({openModal,setOpenModal}) => {
       size='55%'
       opened={openModal}
     >
-      <button onClick={()=> setOpenModal(false)}>X</button>
       <PostShare />
     </Modal>
   )

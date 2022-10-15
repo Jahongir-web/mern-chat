@@ -18,9 +18,10 @@ export const RightSide = () => {
       <TrendCard />
       {/* Share modal */}
       <button className="button r-button" onClick={()=> setOpenModal(true)}>
-        Share
-        <ShareModal openModal = {openModal} setOpenModal = {setOpenModal}/>
+        Share        
       </button>
+
+      <ShareModal openModal = {openModal} setOpenModal = {setOpenModal}/>
     </div>
   )
 }

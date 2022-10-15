@@ -14,6 +14,8 @@ export const InfoProvider = ({children}) => {
 
   const [posts, setPosts] = useState([])
 
+  const [modalOpened, setModalOpened] = useState(false)
+
   const serverPublic = "http://localhost:4001/"
 
 // get posts
@@ -31,7 +33,9 @@ export const InfoProvider = ({children}) => {
     loading,
     setLoading,
     posts,
-    setPosts
+    setPosts,
+    modalOpened,
+    setModalOpened
   }
 
   return (

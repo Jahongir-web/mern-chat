@@ -5,16 +5,17 @@ import Chat from "../../img/comment.png"
 import Logout from "../../img/logout.png"
 import {UilSetting} from "@iconscout/react-unicons"
 import { useInfoContext } from '../../context/Context'
+import { ProfileModal } from '../ProfileModal/ProfileModal'
 
 export const NavIcons = () => {
 
-  const {setUser} = useInfoContext()
+  const {setUser, modalOpened, setModalOpened} = useInfoContext()
   return (
     <div className='nav-icons'>
       <Link to={"/home"} >
         <img src={Home} alt="home_icon" />
       </Link>
-      <Link to={""} >
+      <Link to={""} onClick={() => setModalOpened(true)} >
         <UilSetting />
       </Link>
       <Link to={"/chat"} >
@@ -26,7 +27,7 @@ export const NavIcons = () => {
         }}>
         <img src={Logout} alt="exit_icon" />
       </Link>
-
+      <ProfileModal modalOpened={modalOpened} setModalOpened={setModalOpened}/>
     </div>
   )
 }

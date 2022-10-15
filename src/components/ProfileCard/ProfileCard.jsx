@@ -12,7 +12,7 @@ export default function ProfileCard({location}) {
       <div className="profile-images">
       <img src={user.coverPicture ? serverPublic + user.coverPicture : serverPublic + "defaultCover.jpg"} alt="cover_profile" />
 
-      <img src={user.profilePicture ? serverPublic + user.coverPicture : serverPublic + "defaultProfile.png"} alt="profile_photo" />
+      <img width={80} height={90} src={user.profilePicture ? serverPublic + user.profilePicture : serverPublic + "defaultProfile.png"} alt="profile_photo" />
       </div>
 
       <div className="profile-name">
