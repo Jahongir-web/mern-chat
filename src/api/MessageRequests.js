@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'http://localhost:4001' });
+const API = axios.create({ baseURL: 'https://mern-chat-server-cfsj.onrender.com/' });
 
 export const getMessages = (id) => API.get(`/message/${id}`);
 

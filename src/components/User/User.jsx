@@ -23,7 +23,7 @@ export const User = ({person}) => {
     <div className='follower'>
       <div>
         <img src={
-          person.profilePicture ? person.profilePicture : serverPublic + "defaultProfile.png"
+          person.profilePicture ? serverPublic + person.profilePicture : serverPublic + "defaultProfile.png"
         } alt="profile" className='followerImage'/>
         <div className="name">
           <span>{person.firstname}</span>

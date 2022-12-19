@@ -16,7 +16,7 @@ export const InfoProvider = ({children}) => {
 
   const [modalOpened, setModalOpened] = useState(false)
 
-  const serverPublic = "http://localhost:4001/"
+  const serverPublic = "https://mern-chat-server-cfsj.onrender.com/"
 
 // get posts
   useEffect(() => {
