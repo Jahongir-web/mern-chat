@@ -101,3 +101,9 @@
   cursor: pointer;
   background: transparent;
 }
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

@@ -2,7 +2,6 @@ import React from 'react'
 import {Modal} from "@mantine/core"
 import { useInfoContext } from '../../context/Context'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
 import { uploadImage } from '../../api/UploadRequests'
 import { getUser, updateUser } from '../../api/UserRequests'
 
@@ -13,7 +12,6 @@ export const ProfileModal = ({modalOpened, setModalOpened}) => {
   const [formData, setformData] = useState(other)
   const [profileImage, setProfileImage] = useState(null)
   const [coverImage, setCoverImage] = useState(null)
-  const params = useParams()
 
 
   const handleChange = (e)=> {

@@ -37,7 +37,7 @@ export const Chat = () => {
 
   // connect to socket.io
   useEffect(()=> {
-    socket.current = io("ws://localhost:8800")
+    socket.current = io("https://mern-chat-server-cfsj.onrender.com/")
 
     socket.current.emit("new-user-add", user._id)
 
